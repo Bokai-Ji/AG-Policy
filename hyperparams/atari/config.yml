@@ -1,0 +1,41 @@
+ppo:
+    algo: ppo
+    n_envs: 8
+    n_steps: 1024
+    epoch: 3
+    mini_batch_per_epoch: 8
+    mini_batch_size: 1024
+    gamma: 0.999
+    lmbda: 0.95
+    learning_rate: 0.0005
+    grad_clip_norm: 0.5
+    eps_clip: 0.2
+    value_coef: 0.5
+    entropy_coef: 0.01
+    normalize_adv: True
+    normalize_rew: True
+    use_gae: True
+    architecture: nature
+    recurrent: False
+
+concept-ppo:
+    algo: conceptPPO
+    n_envs: 8
+    n_steps: 1024
+    epoch: 3
+    mini_batch_per_epoch: 16
+    mini_batch_size: 512
+    gamma: 0.99
+    lmbda: 0.95
+    learning_rate: 0.0005
+    grad_clip_norm: 0.5
+    eps_clip: 0.2
+    value_coef: 0.5
+    entropy_coef: 0.01
+    normalize_adv: True
+    normalize_rew: True
+    use_gae: True
+    architecture: concept-nature
+    recurrent: False
+    coef_sl: 0.1
+    output_dim: 64
